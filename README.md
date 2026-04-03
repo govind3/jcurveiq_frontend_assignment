@@ -2,7 +2,7 @@
 
 This project implements a real-time **Agent Run Panel** UI that
 visualizes how an AI multi-agent system executes research tasks.\
-Instead of showing a simple loading spinner, the interface displays task
+Instead of showing a simple loading spinner, the interface displays a task
 orchestration, tool calls, intermediate outputs, retries, and final
 synthesized results.
 
@@ -127,41 +127,3 @@ Example:
 run_started → agent_thought → task_spawned → tool_call → partial_output
 → run_complete
 
-------------------------------------------------------------------------
-
-# Known Limitations
-
-With more time, the following improvements would be implemented:
-
--   timeline view for execution
--   dependency visualization graph
--   collapsible logs for large output streams
--   improved retry timeline indicators
--   WebSocket based streaming simulation
--   performance optimization for large task graphs
--   filtering views (errors only / final outputs only)
-
-------------------------------------------------------------------------
-
-# Design Goals
-
-The UI prioritizes:
-
-clarity\
-trust\
-readability\
-simple mental model\
-accurate lifecycle representation
-
-The final output is emphasized while preserving transparency into the
-reasoning process.
-
-------------------------------------------------------------------------
-
-# Author Notes
-
-Hardest part: Designing a UI that clearly communicates retry vs failure
-vs cancellation without confusing the user.
-
-Schema improvement suggestion: A dedicated retry_count field would
-simplify UI logic for representing retry attempts.
